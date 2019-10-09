@@ -4,10 +4,8 @@ use Model\Shortener\Shortener;
 
 $router = new Router();
 
-$router->add_route('/', 'index', 'main');
-function index (){
-  $_SESSION['feedback'] ='uspeh';
-}
+$router->add_route('/', function(){}, 'main');
+
 
 $router->add_route('/callback', 'shorten', 'main');
 
